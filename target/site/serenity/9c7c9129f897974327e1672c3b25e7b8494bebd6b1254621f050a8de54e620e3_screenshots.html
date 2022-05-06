@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">suraScreenplay</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="e0b0a7be95d4763b94f6f6c557c6cd4542df0c35cba818ddd58eb7f56da24d23.html">Crear Cuenta Para El Portal Web Automationpractice</a></span>
+                > <span class="truncate-60"><a
+                    href="9c7c9129f897974327e1672c3b25e7b8494bebd6b1254621f050a8de54e620e3.html">: 001- Creacion de una cuenta para el porta web AutomationPractice </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 05-05-2022 18:07</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Crear Cuenta Para El Portal Web Automationpractice</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="97365cd66d14b837e71e911a40cab76659ded9d1709218c496297f526488c16f.html">Registro Exitoso
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">: 001- Creacion de una cuenta para el porta web AutomationPractice
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Dado que el usuario ingresa a la pagina web para la creacion de una cuenta en automationpractice "&lt;ESCENARIO&gt;" "&lt;FUNCIONALIDAD&gt;"<br>Cuando ingresa el modulo de registro y llena todo el formulario de datos personas y direccion<br>Entonces el usuario crea su cuenta automationpractice con exito</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="246e809fbea492ea04f2f57bc6bec7c25ca94dcf0d26469d2caba89374895e2c.png" title=" 1: : 001- Creacion de una cuenta para el porta web AutomationPractice ({ESCENARIO=001- CREAR UNA CUENTA, FUNCIONALIDAD=CREACION DE UNA CUENTA PARA EL PORTAL WEB AUTOMATIONPRACTICE})" width="1366"/>
+                <img src="246e809fbea492ea04f2f57bc6bec7c25ca94dcf0d26469d2caba89374895e2c.png" title=" Dado que el usuario ingresa a la pagina web para la creacion de una cuenta en automationpractice &quot;001- CREAR UNA CUENTA&quot; &quot;CREACION DE UNA CUENTA PARA EL PORTAL WEB AUTOMATIONPRACTICE&quot;" width="1366"/>
+                <img src="246e809fbea492ea04f2f57bc6bec7c25ca94dcf0d26469d2caba89374895e2c.png" title=" Elliot alderson abrir" width="1366"/>
+                <img src="246e809fbea492ea04f2f57bc6bec7c25ca94dcf0d26469d2caba89374895e2c.png" title=" Elliot Alderson opens the browser at http://automationpractice.com/" width="1366"/>
+                <img src="246e809fbea492ea04f2f57bc6bec7c25ca94dcf0d26469d2caba89374895e2c.png" title=" Elliot alderson abrir (completed)" width="1366"/>
+                <img src="246e809fbea492ea04f2f57bc6bec7c25ca94dcf0d26469d2caba89374895e2c.png" title=" Then validar texto home" width="1366"/>
+                <img src="246e809fbea492ea04f2f57bc6bec7c25ca94dcf0d26469d2caba89374895e2c.png" title=" Elliot alderson ingresar a sing in" width="1366"/>
+                <img src="246e809fbea492ea04f2f57bc6bec7c25ca94dcf0d26469d2caba89374895e2c.png" title=" Elliot Alderson clicks on El usuario Elliot Alderson pulsa el boton login" width="1366"/>
+                <img src="49e10d1a1591b6a5f76e6d899c6d4e036b2bb238dce8776340558560a2d0b73d.png" title=" Elliot Alderson clicks on El usuario Elliot Alderson pulsa el boton login (completed)" width="1920"/>
+                <img src="49e10d1a1591b6a5f76e6d899c6d4e036b2bb238dce8776340558560a2d0b73d.png" title=" Elliot alderson ingresar a sing in (completed)" width="1920"/>
+                <img src="49e10d1a1591b6a5f76e6d899c6d4e036b2bb238dce8776340558560a2d0b73d.png" title=" Then valida texto crear cuenta" width="1920"/>
+                <img src="49e10d1a1591b6a5f76e6d899c6d4e036b2bb238dce8776340558560a2d0b73d.png" title=" Elliot alderson pre registro" width="1920"/>
+                <img src="49e10d1a1591b6a5f76e6d899c6d4e036b2bb238dce8776340558560a2d0b73d.png" title=" Elliot Alderson enters 'teodoro.casanova@yahoo.com' into El usuario Elliot Alderson ingresar un correo electronico para su respectiva validacion" width="1920"/>
+                <img src="df21c369118bfc3466841306799a0ee66b69c4deff65c02f2fa1270134dc4a11.png" title=" Elliot Alderson enters 'teodoro.casanova@yahoo.com' into El usuario Elliot Alderson ingresar un correo electronico para su respectiva validacion (completed)" width="1920"/>
+                <img src="df21c369118bfc3466841306799a0ee66b69c4deff65c02f2fa1270134dc4a11.png" title=" Elliot Alderson clicks on El usuario Elliot Alderson pulsa el boton para confirmar el  ingreso de correo valido" width="1920"/>
+                <img src="b1b9983721a352a1ca04c28126dd7de9223ab486385bf9a76b852fd4d2110e00.png" title=" Elliot Alderson clicks on El usuario Elliot Alderson pulsa el boton para confirmar el  ingreso de correo valido (completed)" width="1920"/>
+                <img src="b1b9983721a352a1ca04c28126dd7de9223ab486385bf9a76b852fd4d2110e00.png" title=" Elliot alderson pre registro (completed)" width="1920"/>
+                <img src="5c2d00ede33e7028b1bb319a933fb73bc22ba39a0ca6a290acd3c53a5bad2479.png" title=" Then validar texto crear cuenta frm" width="1920"/>
+                <img src="1f035710e509c3b19142f2f0b10922d46fe42deaee26e97c5b292343edd5ccca.png" title=" Then validar texto crear cuenta frm (completed)" width="1920"/>
+                <img src="1f035710e509c3b19142f2f0b10922d46fe42deaee26e97c5b292343edd5ccca.png" title=" Dado que el usuario ingresa a la pagina web para la creacion de una cuenta en automationpractice &quot;001- CREAR UNA CUENTA&quot; &quot;CREACION DE UNA CUENTA PARA EL PORTAL WEB AUTOMATIONPRACTICE&quot; (completed)" width="1920"/>
+                <img src="c9960a3ffb85d5e11ad3201aaacf13e301e71c0039998c4296fe261be7d496c1.png" title=" Cuando ingresa el modulo de registro y llena todo el formulario de datos personas y direccion" width="1920"/>
+                <img src="c9960a3ffb85d5e11ad3201aaacf13e301e71c0039998c4296fe261be7d496c1.png" title=" Elliot alderson frm crear cuenta datos personales" width="1920"/>
+                <img src="2588c11f1c878e6378f8018a1fbab9ad9dbc67e5b934a66fb44f898ca1d70288.png" title=" Elliot Alderson clicks on El usuario Elliot Alderson  debera escoger el titulo de acuerdo a su tipo de genero o como el se indentifique" width="1920"/>
+                <img src="b095fb4c0b2f3d665d667ad7f4deddb0c48379040d93a1dc5a848cb5ecf5c31f.png" title=" Elliot Alderson clicks on El usuario Elliot Alderson  debera escoger el titulo de acuerdo a su tipo de genero o como el se indentifique (completed)" width="1920"/>
+                <img src="b095fb4c0b2f3d665d667ad7f4deddb0c48379040d93a1dc5a848cb5ecf5c31f.png" title=" Elliot Alderson enters 'Guillermina' into El usuario Elliot Alderson  debera ingresar sus nombres completos" width="1920"/>
+                <img src="32c270b2d1b65ad9be24e1cb8e2f4a1b287c2c585573cfbe26636a135b588212.png" title=" Elliot Alderson enters 'Guillermina' into El usuario Elliot Alderson  debera ingresar sus nombres completos (completed)" width="1920"/>
+                <img src="32c270b2d1b65ad9be24e1cb8e2f4a1b287c2c585573cfbe26636a135b588212.png" title=" Elliot Alderson enters 'Quintero' into El usuario Elliot Alderson  debera ingresar sus apellidos completos" width="1920"/>
+                <img src="97e4ffd5b107eb6056a35f916f13eee3907271103907d2a6d0ecb8993b76b72c.png" title=" Elliot Alderson enters 'Quintero' into El usuario Elliot Alderson  debera ingresar sus apellidos completos (completed)" width="1920"/>
+                <img src="97e4ffd5b107eb6056a35f916f13eee3907271103907d2a6d0ecb8993b76b72c.png" title=" Elliot Alderson enters 'zglkzuvr9qh0' into El usuario Elliot Alderson  debera ingresar una contrase&ntilde;a de preferencia y que cumpla con las condiciones minimas de seguridad" width="1920"/>
+                <img src="2bacfbec0e21a755c378f53ad74791b389f364ee4be89c21a4923e32f77e8d4c.png" title=" Elliot Alderson enters 'zglkzuvr9qh0' into El usuario Elliot Alderson  debera ingresar una contrase&ntilde;a de preferencia y que cumpla con las condiciones minimas de seguridad (completed)" width="1920"/>
+                <img src="2bacfbec0e21a755c378f53ad74791b389f364ee4be89c21a4923e32f77e8d4c.png" title=" Elliot Alderson clicks on El usuario Elliot Alderson  selecciona el dia de nacimiento" width="1920"/>
+                <img src="bbdda507968b1391bf47e241207f6084ff07400249831c47cce9fe89b269368e.png" title=" Elliot Alderson clicks on El usuario Elliot Alderson  selecciona el dia de nacimiento (completed)" width="1920"/>
+                <img src="bbdda507968b1391bf47e241207f6084ff07400249831c47cce9fe89b269368e.png" title=" Elliot Alderson clicks on El usuario Elliot Alderson  selecciona el mes de nacimiento" width="1920"/>
+                <img src="3fa201dd4d80d54eed7769bdc7c9fe7e24f3cff22a409f8e5421297d681f669c.png" title=" Elliot Alderson clicks on El usuario Elliot Alderson  selecciona el mes de nacimiento (completed)" width="1920"/>
+                <img src="3fa201dd4d80d54eed7769bdc7c9fe7e24f3cff22a409f8e5421297d681f669c.png" title=" Elliot Alderson clicks on El usuario Elliot Alderson  selecciona el a&ntilde;o de nacimiento" width="1920"/>
+                <img src="58697e2d5b00bd875f0a5e3671912c45c990ce74b2f9cae8d85031323d400d09.png" title=" Elliot Alderson clicks on El usuario Elliot Alderson  selecciona el a&ntilde;o de nacimiento (completed)" width="1920"/>
+                <img src="58697e2d5b00bd875f0a5e3671912c45c990ce74b2f9cae8d85031323d400d09.png" title=" Elliot Alderson clicks on El usuario Elliot Alderson  acepta terminos y condiciones" width="1920"/>
+                <img src="f254814ab4083df2ec25bb670ded444504b70fb3dde04b614856713036f78cd6.png" title=" Elliot Alderson clicks on El usuario Elliot Alderson  acepta terminos y condiciones (completed)" width="1920"/>
+                <img src="f254814ab4083df2ec25bb670ded444504b70fb3dde04b614856713036f78cd6.png" title=" Elliot Alderson clicks on El usuario Elliot Alderson  acepta que le lleguen ofertas al correo" width="1920"/>
+                <img src="e4aa91c0239497fb13c0096e6f12746ba101e6ae50a5a3207d00504fc90495b5.png" title=" Elliot Alderson clicks on El usuario Elliot Alderson  acepta que le lleguen ofertas al correo (completed)" width="1920"/>
+                <img src="e4aa91c0239497fb13c0096e6f12746ba101e6ae50a5a3207d00504fc90495b5.png" title=" Elliot alderson frm crear cuenta datos personales (completed)" width="1920"/>
+                <img src="e4aa91c0239497fb13c0096e6f12746ba101e6ae50a5a3207d00504fc90495b5.png" title=" Elliot alderson frm crear cuenta datos sus direcciones" width="1920"/>
+                <img src="e4aa91c0239497fb13c0096e6f12746ba101e6ae50a5a3207d00504fc90495b5.png" title=" Elliot Alderson enters 'Narv&aacute;ez Hermanos' into El usuarioElliot Alderson ingresa el nombre de la empresa" width="1920"/>
+                <img src="c663790d9d9f9c38865350dcd4ebfce667bb56d29e6925930bc3067e1356efaf.png" title=" Elliot Alderson enters 'Narv&aacute;ez Hermanos' into El usuarioElliot Alderson ingresa el nombre de la empresa (completed)" width="1920"/>
+                <img src="c663790d9d9f9c38865350dcd4ebfce667bb56d29e6925930bc3067e1356efaf.png" title=" Elliot Alderson enters 'Esc. 401 Arrabal Timoteo, 6, Avil&eacute;s, And 96237' into El usuarioElliot Alderson ingresa la direccion principal" width="1920"/>
+                <img src="a26e8e2f76cb75160c208a5e03cd4e9cc24c0d24cc16ee415d0fbdfda22f2f63.png" title=" Elliot Alderson enters 'Esc. 401 Arrabal Timoteo, 6, Avil&eacute;s, And 96237' into El usuarioElliot Alderson ingresa la direccion principal (completed)" width="1920"/>
+                <img src="a26e8e2f76cb75160c208a5e03cd4e9cc24c0d24cc16ee415d0fbdfda22f2f63.png" title=" Elliot Alderson enters 'Puerta 583 Puerta Ram&oacute;n Alc&aacute;ntar 70 Puerta 801, Ferrol, Mur 23295' into El usuarioElliot Alderson ingresa la direccion secundaria" width="1920"/>
+                <img src="ec1263647cd8506b96a7bf172585b707f9dbebeba9b98822d969e4f9a0702281.png" title=" Elliot Alderson enters 'Puerta 583 Puerta Ram&oacute;n Alc&aacute;ntar 70 Puerta 801, Ferrol, Mur 23295' into El usuarioElliot Alderson ingresa la direccion secundaria (completed)" width="1920"/>
+                <img src="ec1263647cd8506b96a7bf172585b707f9dbebeba9b98822d969e4f9a0702281.png" title=" Elliot Alderson enters 'Port Elliside' into El usuarioElliot Alderson ingresa la ciudad" width="1920"/>
+                <img src="88fca8bd799c71f27054efb72f32884f0c6174d8c0261d9dbd75ad372e2a4f44.png" title=" Elliot Alderson enters 'Port Elliside' into El usuarioElliot Alderson ingresa la ciudad (completed)" width="1920"/>
+                <img src="88fca8bd799c71f27054efb72f32884f0c6174d8c0261d9dbd75ad372e2a4f44.png" title=" Elliot Alderson clicks on El usuarioElliot Alderson seleccion el estado al cual pertenece" width="1920"/>
+                <img src="2190d133a2829bfa56aa66f513b0441d2fb8e706400def6faeb663bc47b297e4.png" title=" Elliot Alderson clicks on El usuarioElliot Alderson seleccion el estado al cual pertenece (completed)" width="1920"/>
+                <img src="2190d133a2829bfa56aa66f513b0441d2fb8e706400def6faeb663bc47b297e4.png" title=" Elliot Alderson enters '00000' into El usuarioElliot Alderson ingresa el codido postal ya determinado por el mismo sistema" width="1920"/>
+                <img src="b4314daf7c48bf88b32837d880fa2be279fcdbcd437a3771b25b4fffc25f7a37.png" title=" Elliot Alderson enters '00000' into El usuarioElliot Alderson ingresa el codido postal ya determinado por el mismo sistema (completed)" width="1920"/>
+                <img src="b4314daf7c48bf88b32837d880fa2be279fcdbcd437a3771b25b4fffc25f7a37.png" title=" Elliot Alderson clicks on El usuarioElliot Alderson selecciona el pais que aparece en la lista desplegable" width="1920"/>
+                <img src="280151e1897726a156fb94f04d88f1eed91873818493f72c747634ceca819e72.png" title=" Elliot Alderson clicks on El usuarioElliot Alderson selecciona el pais que aparece en la lista desplegable (completed)" width="1920"/>
+                <img src="280151e1897726a156fb94f04d88f1eed91873818493f72c747634ceca819e72.png" title=" Elliot Alderson enters 'Hola soy el robot Elliot Alderson pero tambi&eacute;n me dicen Apolo, dejo este comentario como informaci&oacute;n adicional porque as&iacute; me programaron... SALUDOS, 05/05/2022' into El usuarioElliot Alderson ingresa los comentarios" width="1920"/>
+                <img src="7009b00610b6df067d9bba2f4c248a548d542d7df47e95ff1010c7df7a47db91.png" title=" Elliot Alderson enters 'Hola soy el robot Elliot Alderson pero tambi&eacute;n me dicen Apolo, dejo este comentario como informaci&oacute;n adicional porque as&iacute; me programaron... SALUDOS, 05/05/2022' into El usuarioElliot Alderson ingresa los comentarios (completed)" width="1920"/>
+                <img src="7009b00610b6df067d9bba2f4c248a548d542d7df47e95ff1010c7df7a47db91.png" title=" Elliot Alderson enters '(251) 633-6846' into El usuarioElliot Alderson ingresa el numero de telefono" width="1920"/>
+                <img src="0949793b310e9b7796a75acf45fb69f74d6333a0d3e8d292d95004d47d127e75.png" title=" Elliot Alderson enters '(251) 633-6846' into El usuarioElliot Alderson ingresa el numero de telefono (completed)" width="1920"/>
+                <img src="0949793b310e9b7796a75acf45fb69f74d6333a0d3e8d292d95004d47d127e75.png" title=" Elliot Alderson enters '1-910-122-0133' then hits TAB and BACK_SPACE into El usuarioElliot Alderson ingresar el numero de telefono movil" width="1920"/>
+                <img src="cc094187c54532643f1f9ff1a5496ffad1e286d31e821d4e0675ca506708e6af.png" title=" Elliot Alderson enters '1-910-122-0133' then hits TAB and BACK_SPACE into El usuarioElliot Alderson ingresar el numero de telefono movil (completed)" width="1920"/>
+                <img src="cc094187c54532643f1f9ff1a5496ffad1e286d31e821d4e0675ca506708e6af.png" title=" Elliot Alderson enters 'Victreebel' into El usuarioElliot Alderson ingresa un punto de referencia de la direccion o un alias" width="1920"/>
+                <img src="461689d1b06a10193f6674913366715a6ae76a8662d316aa8bd1dd6b36994137.png" title=" Elliot Alderson enters 'Victreebel' into El usuarioElliot Alderson ingresa un punto de referencia de la direccion o un alias (completed)" width="1920"/>
+                <img src="461689d1b06a10193f6674913366715a6ae76a8662d316aa8bd1dd6b36994137.png" title=" Elliot Alderson clicks on El usuarioElliot Alderson presiona el boton summit para crear la cuenta" width="1920"/>
+                <img src="be9395f9f93786e9fc55971f0b066f60191556104adc72a22622e90e022dd9d0.png" title=" Elliot Alderson clicks on El usuarioElliot Alderson presiona el boton summit para crear la cuenta (completed)" width="1920"/>
+                <img src="be9395f9f93786e9fc55971f0b066f60191556104adc72a22622e90e022dd9d0.png" title=" Elliot alderson frm crear cuenta datos sus direcciones (completed)" width="1920"/>
+                <img src="be9395f9f93786e9fc55971f0b066f60191556104adc72a22622e90e022dd9d0.png" title=" Cuando ingresa el modulo de registro y llena todo el formulario de datos personas y direccion (completed)" width="1920"/>
+                <img src="be9395f9f93786e9fc55971f0b066f60191556104adc72a22622e90e022dd9d0.png" title=" Entonces el usuario crea su cuenta automationpractice con exito" width="1920"/>
+                <img src="be9395f9f93786e9fc55971f0b066f60191556104adc72a22622e90e022dd9d0.png" title=" Then validar texto cuenta creada" width="1920"/>
+                <img src="be9395f9f93786e9fc55971f0b066f60191556104adc72a22622e90e022dd9d0.png" title=" Then validar texto cuenta creada" width="1920"/>
+                <img src="be9395f9f93786e9fc55971f0b066f60191556104adc72a22622e90e022dd9d0.png" title=" 1: : 001- Creacion de una cuenta para el porta web AutomationPractice ({ESCENARIO=001- CREAR UNA CUENTA, FUNCIONALIDAD=CREACION DE UNA CUENTA PARA EL PORTAL WEB AUTOMATIONPRACTICE}) (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.2.4</span>
+</div>
+</body>
+</html>
