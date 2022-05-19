@@ -19,6 +19,9 @@ import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+
+import java.text.ParseException;
+
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -54,7 +57,7 @@ public class RegistroStep {
         theActorInTheSpotlight().should(seeThat(ValidarTextoCuentaCreada.cuentaCreadaConExito()));
     }
     @After
-    public void Reporteria(){
+    public void Reporteria() {
         Reporte.reporteDeSerenity();
     }
 
