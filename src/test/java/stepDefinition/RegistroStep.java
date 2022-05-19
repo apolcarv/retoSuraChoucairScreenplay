@@ -2,6 +2,7 @@ package stepDefinition;
 
 import co.com.sura.screenplay.helpers.Constant;
 import co.com.sura.screenplay.helpers.TestInfo;
+import co.com.sura.screenplay.helpers.Utils.Reporte;
 import co.com.sura.screenplay.question.home.ValidarTextoHome;
 import co.com.sura.screenplay.question.preRegistro.ValidaTextoCrearCuenta;
 import co.com.sura.screenplay.question.registro.ValidarTextoCrearCuentaFrm;
@@ -11,6 +12,7 @@ import co.com.sura.screenplay.task.home.IngresarASingIn;
 import co.com.sura.screenplay.task.preRegistro.PreRegistro;
 import co.com.sura.screenplay.task.registro.FrmCrearCuentaDatosPersonales;
 import co.com.sura.screenplay.task.registro.FrmCrearCuentaDatosSusDirecciones;
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
@@ -40,8 +42,9 @@ public class RegistroStep {
         theActorInTheSpotlight().should(seeThat(ValidarTextoCrearCuentaFrm.validartextoCrearRegistro()));
     }
 
-    @Cuando("ingresa el modulo de registro y llena todo el formulario de datos personas y direccion")
-    public void ingresaElModuloDeRegistroYLlenaTodoElFormularioDeDatosPersonasYDireccion() {
+
+    @Cuando("ingresa el modulo de registro y llena todo el formulario de datos personales y sus direcciones")
+    public void ingresaElModuloDeRegistroYLlenaTodoElFormularioDeDatosPersonalesYSusDirecciones() {
         theActorCalled(Constant.MR_ROBOT).attemptsTo(FrmCrearCuentaDatosPersonales.llenarFormularioInformacionPersonal());
         theActorCalled(Constant.MR_ROBOT).attemptsTo(FrmCrearCuentaDatosSusDirecciones.llenarFormularioDeDirecciones());
     }
@@ -50,5 +53,10 @@ public class RegistroStep {
     public void elUsuarioCreaSuCuentaAutomationpracticeConExito() {
         theActorInTheSpotlight().should(seeThat(ValidarTextoCuentaCreada.cuentaCreadaConExito()));
     }
+    @After
+    public void Reporteria(){
+        Reporte.reporteDeSerenity();
+    }
+
 
 }
