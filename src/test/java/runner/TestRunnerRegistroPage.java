@@ -11,4 +11,5 @@ import org.junit.runner.RunWith;
         , tags = "@Registro_exitoso"
         , snippets =  CucumberOptions.SnippetType.CAMELCASE)
 public class TestRunnerRegistroPage {
+
 }

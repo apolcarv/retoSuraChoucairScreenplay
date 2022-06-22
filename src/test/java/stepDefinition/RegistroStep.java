@@ -17,10 +17,10 @@ import io.cucumber.java.Before;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
+import io.cucumber.java.es.Y;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
-import java.text.ParseException;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
@@ -45,7 +45,6 @@ public class RegistroStep {
         theActorInTheSpotlight().should(seeThat(ValidarTextoCrearCuentaFrm.validartextoCrearRegistro()));
     }
 
-
     @Cuando("ingresa el modulo de registro y llena todo el formulario de datos personales y sus direcciones")
     public void ingresaElModuloDeRegistroYLlenaTodoElFormularioDeDatosPersonalesYSusDirecciones() {
         theActorCalled(Constant.MR_ROBOT).attemptsTo(FrmCrearCuentaDatosPersonales.llenarFormularioInformacionPersonal());
@@ -60,6 +59,5 @@ public class RegistroStep {
     public void Reporteria() {
         Reporte.reporteDeSerenity();
     }
-
 
 }
